@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sLZ-rS-z6U">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Google Speech API-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Google Speech API" id="BYZ-38-t0r" customClass="GoogleSpeechToText" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eu5-dr-I26">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="EZa-5H-TUv"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ajw-yI-fgK"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TAN-SH-TFW">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Being Sent:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qli-Rq-Tkc">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TAN-SH-TFW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BG8-fb-Eg1"/>
+                            <constraint firstItem="TAN-SH-TFW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Iac-XJ-uu6"/>
+                            <constraint firstItem="eu5-dr-I26" firstAttribute="centerX" secondItem="qli-Rq-Tkc" secondAttribute="centerX" id="Wfc-bb-BUQ"/>
+                            <constraint firstItem="TAN-SH-TFW" firstAttribute="top" secondItem="qli-Rq-Tkc" secondAttribute="bottom" constant="8" symbolic="YES" id="ery-F4-edZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TAN-SH-TFW" secondAttribute="bottom" constant="8" symbolic="YES" id="kRE-I4-kM8"/>
+                            <constraint firstItem="eu5-dr-I26" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="rXd-j8-7EZ"/>
+                            <constraint firstItem="qli-Rq-Tkc" firstAttribute="centerX" secondItem="TAN-SH-TFW" secondAttribute="centerX" id="uDt-wK-czp"/>
+                            <constraint firstItem="qli-Rq-Tkc" firstAttribute="top" secondItem="eu5-dr-I26" secondAttribute="bottom" constant="59" id="wqz-uA-Ftd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rmc-Ip-Uyl"/>
+                    <connections>
+                        <outlet property="startButton" destination="eu5-dr-I26" id="rC9-eq-bA9"/>
+                        <outlet property="textView" destination="TAN-SH-TFW" id="uvy-tt-Kdw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2349.5999999999999" y="428.63568215892059"/>
+        </scene>
+        <!--SFSpeechRecognizer-->
+        <scene sceneID="84W-Ss-HaH">
+            <objects>
+                <viewController title="SFSpeechRecognizer" id="Nv4-NT-mUM" customClass="SFSpeechViewController" customModule="TextToSpeech" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IRd-Es-xJS"/>
+                        <viewControllerLayoutGuide type="bottom" id="2BI-Un-pCN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DqQ-ah-gEb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oDp-dc-bYc">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2k-F8-T8w">
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="recordButtonTapped" destination="Nv4-NT-mUM" eventType="touchUpInside" id="iAC-RQ-lVb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text being sent:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3Q-PD-cD6">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l2k-F8-T8w" firstAttribute="centerX" secondItem="E3Q-PD-cD6" secondAttribute="centerX" id="9Le-LQ-Tki"/>
+                            <constraint firstItem="2BI-Un-pCN" firstAttribute="top" secondItem="oDp-dc-bYc" secondAttribute="bottom" constant="8" symbolic="YES" id="CD7-cc-Zsh"/>
+                            <constraint firstItem="l2k-F8-T8w" firstAttribute="top" secondItem="IRd-Es-xJS" secondAttribute="bottom" constant="44" id="F2T-Ia-1SL"/>
+                            <constraint firstItem="l2k-F8-T8w" firstAttribute="leading" secondItem="DqQ-ah-gEb" secondAttribute="leadingMargin" constant="91" id="cYs-WP-7mK"/>
+                            <constraint firstItem="E3Q-PD-cD6" firstAttribute="top" secondItem="l2k-F8-T8w" secondAttribute="bottom" constant="59" id="jDy-5z-Cap"/>
+                            <constraint firstItem="oDp-dc-bYc" firstAttribute="trailing" secondItem="DqQ-ah-gEb" secondAttribute="trailingMargin" id="oBf-cA-9PA"/>
+                            <constraint firstItem="oDp-dc-bYc" firstAttribute="leading" secondItem="DqQ-ah-gEb" secondAttribute="leadingMargin" id="pwN-9z-chP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l2k-F8-T8w" secondAttribute="trailing" constant="84" id="qoD-7L-XYo"/>
+                            <constraint firstItem="oDp-dc-bYc" firstAttribute="top" secondItem="E3Q-PD-cD6" secondAttribute="bottom" constant="8" symbolic="YES" id="tmr-nw-Inn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zVm-fA-o8W"/>
+                    <connections>
+                        <outlet property="recordButton" destination="l2k-F8-T8w" id="RJr-BV-9IC"/>
+                        <outlet property="textView" destination="oDp-dc-bYc" id="fQc-7i-KZO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEz-e3-DTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2348" y="1225.6371814092954"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="h0n-gU-04E">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="sLZ-rS-z6U" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="e8R-za-06t">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="An8-b9-kTM" kind="relationship" relationship="viewControllers" id="Rmg-hJ-stt"/>
+                        <segue destination="E0P-RD-hl8" kind="relationship" relationship="viewControllers" id="pdP-Xx-If0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K8F-UJ-WrR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="471.19999999999999" y="428.63568215892059"/>
+        </scene>
+        <!--Google API-->
+        <scene sceneID="HbI-Hy-7bo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="An8-b9-kTM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Google API" id="lJp-iH-oFx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zcW-jo-M5q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Vnt-r7-7OD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdg-BL-TSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1410.4000000000001" y="428.63568215892059"/>
+        </scene>
+        <!--IOS 10 API-->
+        <scene sceneID="6EY-5k-svr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E0P-RD-hl8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="IOS 10 API" id="kQC-hw-DXA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8U9-wn-mYT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Nv4-NT-mUM" kind="relationship" relationship="rootViewController" id="TF0-aB-JxR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szZ-p9-1eO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1411" y="1204"/>
+        </scene>
+    </scenes>
+</document>

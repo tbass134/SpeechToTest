@@ -1,0 +1,148 @@
+PODS:
+  - '!ProtoCompiler (3.0.0-beta-4)':
+    - Protobuf (= 3.0.0-beta-4)
+  - '!ProtoCompiler-gRPCPlugin (1.0.0-pre1.1)':
+    - '!ProtoCompiler (= 3.0.0-beta-4)'
+    - gRPC-ProtoRPC (= 1.0.0-pre1)
+  - AWSAutoScaling (2.4.5):
+    - AWSCore (= 2.4.5)
+  - AWSCloudWatch (2.4.5):
+    - AWSCore (= 2.4.5)
+  - AWSCognito (2.4.5):
+    - AWSCore (= 2.4.5)
+  - AWSCognitoSync (2.4.5):
+    - AWSCognito (= 2.4.5)
+  - AWSCore (2.4.5)
+  - AWSDynamoDB (2.4.5):
+    - AWSCore (= 2.4.5)
+  - AWSEC2 (2.4.5):
+    - AWSCore (= 2.4.5)
+  - AWSElasticLoadBalancing (2.4.5):
+    - AWSCore (= 2.4.5)
+  - AWSiOSSDKv2 (2.4.5):
+    - AWSiOSSDKv2/AutoScaling (= 2.4.5)
+    - AWSiOSSDKv2/AWSCore (= 2.4.5)
+    - AWSiOSSDKv2/CloudWatch (= 2.4.5)
+    - AWSiOSSDKv2/DynamoDB (= 2.4.5)
+    - AWSiOSSDKv2/EC2 (= 2.4.5)
+    - AWSiOSSDKv2/ElasticLoadBalancing (= 2.4.5)
+    - AWSiOSSDKv2/Kinesis (= 2.4.5)
+    - AWSiOSSDKv2/MobileAnalytics (= 2.4.5)
+    - AWSiOSSDKv2/S3 (= 2.4.5)
+    - AWSiOSSDKv2/SES (= 2.4.5)
+    - AWSiOSSDKv2/SimpleDB (= 2.4.5)
+    - AWSiOSSDKv2/SNS (= 2.4.5)
+    - AWSiOSSDKv2/SQS (= 2.4.5)
+  - AWSiOSSDKv2/AutoScaling (2.4.5):
+    - AWSAutoScaling (= 2.4.5)
+  - AWSiOSSDKv2/AWSCore (2.4.5):
+    - AWSCore (= 2.4.5)
+  - AWSiOSSDKv2/CloudWatch (2.4.5):
+    - AWSCloudWatch (= 2.4.5)
+  - AWSiOSSDKv2/DynamoDB (2.4.5):
+    - AWSDynamoDB (= 2.4.5)
+  - AWSiOSSDKv2/EC2 (2.4.5):
+    - AWSEC2 (= 2.4.5)
+  - AWSiOSSDKv2/ElasticLoadBalancing (2.4.5):
+    - AWSElasticLoadBalancing (= 2.4.5)
+  - AWSiOSSDKv2/Kinesis (2.4.5):
+    - AWSKinesis (= 2.4.5)
+  - AWSiOSSDKv2/MobileAnalytics (2.4.5):
+    - AWSMobileAnalytics (= 2.4.5)
+  - AWSiOSSDKv2/S3 (2.4.5):
+    - AWSS3 (= 2.4.5)
+  - AWSiOSSDKv2/SES (2.4.5):
+    - AWSSES (= 2.4.5)
+  - AWSiOSSDKv2/SimpleDB (2.4.5):
+    - AWSSimpleDB (= 2.4.5)
+  - AWSiOSSDKv2/SNS (2.4.5):
+    - AWSSNS (= 2.4.5)
+  - AWSiOSSDKv2/SQS (2.4.5):
+    - AWSSQS (= 2.4.5)
+  - AWSKinesis (2.4.5):
+    - AWSCore (= 2.4.5)
+  - AWSMobileAnalytics (2.4.5):
+    - AWSCore (= 2.4.5)
+  - AWSS3 (2.4.5):
+    - AWSCore (= 2.4.5)
+  - AWSSES (2.4.5):
+    - AWSCore (= 2.4.5)
+  - AWSSimpleDB (2.4.5):
+    - AWSCore (= 2.4.5)
+  - AWSSNS (2.4.5):
+    - AWSCore (= 2.4.5)
+  - AWSSQS (2.4.5):
+    - AWSCore (= 2.4.5)
+  - BoringSSL (5.0):
+    - BoringSSL/Implementation (= 5.0)
+    - BoringSSL/Interface (= 5.0)
+  - BoringSSL/Implementation (5.0):
+    - BoringSSL/Interface (= 5.0)
+  - BoringSSL/Interface (5.0)
+  - googleapis (0.0.1):
+    - '!ProtoCompiler-gRPCPlugin (~> 1.0.0-pre1.1)'
+    - googleapis/Messages (= 0.0.1)
+    - googleapis/Services (= 0.0.1)
+  - googleapis/Messages (0.0.1):
+    - '!ProtoCompiler-gRPCPlugin (~> 1.0.0-pre1.1)'
+    - Protobuf
+  - googleapis/Services (0.0.1):
+    - '!ProtoCompiler-gRPCPlugin (~> 1.0.0-pre1.1)'
+    - googleapis/Messages
+    - gRPC-ProtoRPC
+  - gRPC (1.0.0-pre1):
+    - gRPC-Core (= 1.0.0-pre1)
+    - gRPC-RxLibrary (= 1.0.0-pre1)
+  - gRPC-Core (1.0.0-pre1):
+    - gRPC-Core/Implementation (= 1.0.0-pre1)
+    - gRPC-Core/Interface (= 1.0.0-pre1)
+  - gRPC-Core/Implementation (1.0.0-pre1):
+    - BoringSSL (~> 5.0)
+    - gRPC-Core/Interface (= 1.0.0-pre1)
+  - gRPC-Core/Interface (1.0.0-pre1)
+  - gRPC-ProtoRPC (1.0.0-pre1):
+    - gRPC (= 1.0.0-pre1)
+    - gRPC-RxLibrary (= 1.0.0-pre1)
+    - Protobuf (~> 3.0.0-beta-3.1)
+  - gRPC-RxLibrary (1.0.0-pre1)
+  - Protobuf (3.0.0-beta-4)
+
+DEPENDENCIES:
+  - AWSCognitoSync
+  - AWSiOSSDKv2
+  - googleapis (from `.`)
+
+EXTERNAL SOURCES:
+  googleapis:
+    :path: .
+
+SPEC CHECKSUMS:
+  '!ProtoCompiler': 928ce826d31b2248ead8f28dd5a83c627a8e4589
+  '!ProtoCompiler-gRPCPlugin': 718444d85d15a0a24f33e0a981532e2cb70d04cd
+  AWSAutoScaling: 5da3636051c3c407696bc85918b74160c938ba8a
+  AWSCloudWatch: b1662c2889e3d7edcfe68e156d87f235becd86b7
+  AWSCognito: 96e1762404831ffb87f67c87a5ee68fde543bb69
+  AWSCognitoSync: 83d3d1c3d9d574f5ec12531115bede54f7dcca23
+  AWSCore: 2f356385bcea9b81ea47f9be0228c71697d9597d
+  AWSDynamoDB: 284308e0f5164aa8178dd06505410390deb44a49
+  AWSEC2: 103802d5499bc5e710940beb1e518b198413b919
+  AWSElasticLoadBalancing: 81648d2eabe1f99a6ed4f50dd387db7462c5e618
+  AWSiOSSDKv2: d9164f1c07669338aa2e62210a25c97626d4a8e4
+  AWSKinesis: fa2b1dc658295c1b4ee246a0f684dcaab078d585
+  AWSMobileAnalytics: 8546db78fa7f3ff66099902199fed47c68f148e3
+  AWSS3: 8f73b439f12c4aaaea39fbec87f67a1f1e15bd42
+  AWSSES: 3f11397d923357c81fdced1bf8028a6f42e31508
+  AWSSimpleDB: c7f91fdd299ca58f222ee95e89a27022cd47ada1
+  AWSSNS: aaf565330d8f2f7c4f2cb13d2a20bceae8259f2f
+  AWSSQS: 8026703bf7cbe8ea1728f95f358f7cb4536e5040
+  BoringSSL: 92bfd6e0c0914dd4d898b5fc2fca01cf6dedebeb
+  googleapis: 0b8d20676f3e3d45cdbe1ae10c28d921991e7682
+  gRPC: 68ce9f9f7453bf4ce18aeab0681aa3ff44401cae
+  gRPC-Core: 87a599cf81bd2534d74496198074a9fb09b3c1f8
+  gRPC-ProtoRPC: d7de5cfb271c2d047f3eace618c4ed3168cb60cf
+  gRPC-RxLibrary: d319234ca32e39a42de4aa3a06d4bd67640d3d4e
+  Protobuf: ec704f0045f7a30e1686fbb3994f43f689a0021b
+
+PODFILE CHECKSUM: e46ad703c79de258955f2835e118a8ce2fd63bb9
+
+COCOAPODS: 1.0.1
